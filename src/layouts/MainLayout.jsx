@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col min-h-[300vh]">
+    <div className="flex flex-col">
       <Navbar />
 
       <header className="bg-gray-100 p-4 flex flex-col md:flex-row gap-2 justify-between items-center">

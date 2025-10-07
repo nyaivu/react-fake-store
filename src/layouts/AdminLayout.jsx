@@ -6,11 +6,11 @@ const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className=" bg-gray-100">
       {/* Menggunakan Componen Sidebar */}
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       {/* Main content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex flex-col">
         {/* Top bar (for mobile) */}
         <div className="md:hidden bg-white shadow p-4 flex justify-between">
           <h1 className="font-bold">My Admin</h1>
@@ -22,7 +22,7 @@ const AdminLayout = () => {
           </button>
         </div>
         {/* Page Content */}
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="overflow-y-auto p-6">
           <Outlet />
           {/* <-- tempat DashboardPage ditampilkan, dengan
 pendekatan Otlet akan berbeda jika pengembangan menggunakan typscript */}
