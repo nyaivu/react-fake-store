@@ -9,11 +9,15 @@ const ProductItem = ({ product }) => {
   const cart = useCartStore((state) => state.cart);
 
   return (
-    <div className="flex flex-col items-start gap-2 border rounded-lg p-4 shadow hover:shadow-lg transition-all">
-      <Link to={`/product/${product.id}`} state={product}>
+    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition-all">
+      <Link
+        className="flex flex-col items-start gap-2"
+        to={`/product/${product.id}`}
+        state={product}
+      >
         <img
           src={product.image}
-          className="w-auto h-48 justify-self-center"
+          className="w-full max-h-48 object-contain justify-self-center"
           width={200}
           height={200}
         />
@@ -31,7 +35,7 @@ const ProductItem = ({ product }) => {
             quantity: 1,
           })
         }
-        className="bg-blue-600 rounded-md text-white px-2 py-1 hover:underline mt-2 block"
+        className="cursor-pointer bg-blue-600 rounded-md text-white px-2 py-1 hover:underline mt-2 block"
       >
         Add to Cart
       </button>

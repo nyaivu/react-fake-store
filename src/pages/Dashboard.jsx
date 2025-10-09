@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getAllProducts } from "./../api/fakeStoreApi";
 
 const Dashboard = () => {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["products"],
     queryFn: getAllProducts,
   });
